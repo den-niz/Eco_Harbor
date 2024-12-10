@@ -1,101 +1,110 @@
-import Image from "next/image";
+import Image from 'next/image'
+import Link from 'next/link'
 
 export default function Home() {
   return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      <main className="flex flex-col gap-8 row-start-2 items-center sm:items-start">
+    <div className="container mx-auto px-4">
+      <section className="py-24 bg-cover bg-center text-emerald-900 relative overflow-hidden">
         <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
+          src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/top-view-paper-spring-foliage-with-copy-space_23-2148413815.jpg-oli7GAB4xMXgMlcEe9TzNIyMUrB0R8.jpeg"
+          alt="Decorative green leaves background"
+          fill
+          className="object-cover object-center"
           priority
         />
-        <ol className="list-inside list-decimal text-sm text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
-          <li className="mb-2">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] px-1 py-0.5 rounded font-semibold">
-              app/page.tsx
-            </code>
-            .
-          </li>
-          <li>Save and see your changes instantly.</li>
-        </ol>
-
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:min-w-44"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
+        <div className="absolute inset-0 bg-gradient-to-r from-emerald-50/95 to-emerald-50/80"></div>
+        <div className="relative z-10">
+          <div className="container mx-auto px-4">
+            <h1 className="text-6xl font-bold mb-6 animate-fade-in">Welcome to Eco Harbor</h1>
+            <p className="text-2xl mb-8 max-w-3xl text-emerald-800">Discover eco-friendly products with transparent eco-ratings, empowering you to make sustainable choices for a greener future.</p>
+            <div className="mb-8">
+              <h2 className="text-3xl font-semibold mb-4 text-emerald-800">Our Mission</h2>
+              <p className="text-lg mb-4 text-emerald-700">At Eco Harbor, we&#39;re committed to promoting sustainable living through carefully curated eco-friendly products. Our mission is to make it easy for consumers to make environmentally conscious choices without compromising on quality or style.</p>
+              <p className="text-lg mb-4 text-emerald-700">We believe in transparency, which is why we&#39;ve developed our unique Eco-Rating system. This helps you understand the environmental impact of each product, from materials used to end-of-life recyclability.</p>
+            </div>
+            <Link 
+              href="/products" 
+              className="bg-emerald-600 text-white px-8 py-4 rounded-lg text-lg font-semibold hover:bg-emerald-500 transition-all duration-300 hover:shadow-lg inline-block hover:-translate-y-0.5"
+            >
+              Explore Our Products
+            </Link>
+          </div>
         </div>
-      </main>
-      <footer className="row-start-3 flex gap-6 flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
+      </section>
+
+      <section className="py-16">
+        <h2 className="text-4xl font-bold mb-12 text-center text-emerald-800">Featured Products</h2>
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div className="border border-emerald-100 rounded-xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1 bg-white">
+            <Image 
+              src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/water-bottle.jpg-Qa6Awxd6m3ac5BMRc2LtLwIK2HOQyg.jpeg" 
+              alt="Eco-Friendly Water Bottle" 
+              width={300} 
+              height={300} 
+              className="mb-6 rounded-lg object-cover w-full h-[300px]"
+            />
+            <h3 className="text-xl font-semibold mb-3 text-emerald-800">Eco-Friendly Water Bottle</h3>
+            <p className="mb-4 text-emerald-600">Stay hydrated sustainably with our bamboo water bottle. Keeps drinks at the perfect temperature while reducing plastic waste.</p>
+            <div className="flex justify-between items-center">
+              <span className="text-lg font-bold text-emerald-600">$25</span>
+              <Link href="/products/1" className="text-emerald-600 hover:text-emerald-500 hover:underline transition-colors">
+                Learn More
+              </Link>
+            </div>
+          </div>
+          <div className="border border-emerald-100 rounded-xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1 bg-white">
+            <Image 
+              src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/AM-Natural-Living-Bamboo-Toothbrush-Set-1000x1000.jpg-lZBJ1PDDmzhFMt8gETn3ksP72bD7Ps.jpeg" 
+              alt="Bamboo Toothbrush Set" 
+              width={300} 
+              height={300} 
+              className="mb-6 rounded-lg object-cover w-full h-[300px]" 
+            />
+            <h3 className="text-xl font-semibold mb-3 text-emerald-800">Bamboo Toothbrush Set</h3>
+            <p className="mb-4 text-emerald-600">Make your daily routine more sustainable with our premium bamboo toothbrush set. Reduce plastic waste while maintaining oral hygiene.</p>
+            <div className="flex justify-between items-center">
+              <span className="text-lg font-bold text-emerald-600">$15</span>
+              <Link href="/products/2" className="text-emerald-600 hover:text-emerald-500 hover:underline transition-colors">
+                Learn More
+              </Link>
+            </div>
+          </div>
+          <div className="border border-emerald-100 rounded-xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1 bg-white">
+            <Image 
+              src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/produce%20bags.jpg-Gc6DasmfOygIA3al3YiUaLaKuhrMTh.jpeg" 
+              alt="Reusable Produce Bags" 
+              width={300} 
+              height={300} 
+              className="mb-6 rounded-lg object-cover w-full h-[300px]" 
+            />
+            <h3 className="text-xl font-semibold mb-3 text-emerald-800">Reusable Produce Bags</h3>
+            <p className="mb-4 text-emerald-600">Make your grocery shopping more sustainable with our set of reusable produce bags. Perfect for fruits, vegetables, and bulk items.</p>
+            <div className="flex justify-between items-center">
+              <span className="text-lg font-bold text-emerald-600">$20</span>
+              <Link href="/products/3" className="text-emerald-600 hover:text-emerald-500 hover:underline transition-colors">
+                Learn More
+              </Link>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section className="py-16 bg-gradient-to-br from-emerald-50 to-emerald-100 rounded-2xl">
+        <div className="max-w-4xl mx-auto px-6 text-center">
+          <h2 className="text-4xl font-bold mb-6 text-emerald-800">Our Eco-Rating System</h2>
+          <p className="text-xl mb-8 text-emerald-700">
+            We believe in transparency. Our eco-rating system helps you make informed decisions about the products you buy.
+          </p>
+          <Link 
+            href="/about" 
+            className="text-emerald-600 hover:text-emerald-500 hover:underline inline-flex items-center gap-2 text-lg font-medium transition-colors"
+          >
+            Learn More About Our Ratings
+            <span className="text-xl">→</span>
+          </Link>
+        </div>
+      </section>
     </div>
-  );
+  )
 }
+
